@@ -1,13 +1,5 @@
-function mostrarMensagem(texto?: string | number):boolean {
+import { mostrarMensagem } from "./functions/mostrarMensagem"
 
-    if (texto) {
-        console.log(texto)
-        return true;
-    } else {
-        return false;
-    }
-
-}
 mostrarMensagem('Roberto')
 mostrarMensagem(200)
 

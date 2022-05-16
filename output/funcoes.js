@@ -1,16 +1,9 @@
 "use strict";
-function mostrarMensagem(texto) {
-    if (texto) {
-        console.log(texto);
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-mostrarMensagem('Roberto');
-mostrarMensagem(200);
-console.log(mostrarMensagem('Roberto'));
+Object.defineProperty(exports, "__esModule", { value: true });
+const mostrarMensagem_1 = require("./functions/mostrarMensagem");
+(0, mostrarMensagem_1.mostrarMensagem)('Roberto');
+(0, mostrarMensagem_1.mostrarMensagem)(200);
+console.log((0, mostrarMensagem_1.mostrarMensagem)('Roberto'));
 console.log("===============");
 const show = (codigo) => {
     return new Date();

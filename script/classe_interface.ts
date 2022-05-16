@@ -1,3 +1,7 @@
+import { Email, SMS } from "./notificacao/classes/MeiosDeNotificacao";
+import Notificacao from "./notificacao/classes/Notificacao";
+import IMeuUsuario from "./notificacao/interfaces/MeuUsuario";
+
 interface IEmailV2
 {
     nome: string;
@@ -71,13 +75,13 @@ class SMSV2 extends Notificacao implements INotificacaoV2, ITelefoneV2
 const mailV2 = new Email();
 const smsV2 = new SMS();
 
-console.log(mail.enviar({
-    nome: "Roberto",
-    email: "teste@teste",
-    telefone: "123456789"
-}))
-console.log(sms.enviar({
-    nome: "Roberto",
-    email: "teste@teste",
-    telefone: "123456789"
-}))
+// console.log(mail.enviar({
+//     nome: "Roberto",
+//     email: "teste@teste",
+//     telefone: "123456789"
+// }))
+// console.log(sms.enviar({
+//     nome: "Roberto",
+//     email: "teste@teste",
+//     telefone: "123456789"
+// }))

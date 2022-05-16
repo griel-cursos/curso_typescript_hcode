@@ -1,7 +1,13 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const MeiosDeNotificacao_1 = require("./notificacao/classes/MeiosDeNotificacao");
+const Notificacao_1 = __importDefault(require("./notificacao/classes/Notificacao"));
 class NotificacaoV2 {
 }
-class EmailV2 extends Notificacao {
+class EmailV2 extends Notificacao_1.default {
     constructor(usuario) {
         super();
         this.nome = usuario.nome;
@@ -12,7 +18,7 @@ class EmailV2 extends Notificacao {
         return true;
     }
 }
-class SMSV2 extends Notificacao {
+class SMSV2 extends Notificacao_1.default {
     constructor(usuario) {
         super();
         this.numero = usuario.telefone;
@@ -22,16 +28,6 @@ class SMSV2 extends Notificacao {
         return true;
     }
 }
-const mailV2 = new Email();
-const smsV2 = new SMS();
-console.log(mail.enviar({
-    nome: "Roberto",
-    email: "teste@teste",
-    telefone: "123456789"
-}));
-console.log(sms.enviar({
-    nome: "Roberto",
-    email: "teste@teste",
-    telefone: "123456789"
-}));
+const mailV2 = new MeiosDeNotificacao_1.Email();
+const smsV2 = new MeiosDeNotificacao_1.SMS();
 //# sourceMappingURL=classe_interface.js.map
